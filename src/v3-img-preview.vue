@@ -27,7 +27,7 @@
           v-show="imgState === 'error'"
           @dragstart.prevent
           aria-hidden="true"
-          :style="`transform: scale(${imgScale}) rotate(${imgRotate}deg);${maxWH}`"
+          :style="`transform: scale(${imgScale}) rotate(${imgRotate}deg);`"
         >
           <use xlink:href="#v3-img-img-error"></use>
         </svg>
