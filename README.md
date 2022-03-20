@@ -1,8 +1,14 @@
 # v3-img-preview
 
+
+
 > 基于vue3编写的图片预览组件，支持单图和多图预览
 
+
+
 ## 安装
+
+
 
 ```shell
 npm install v3-img-preview --save
@@ -62,10 +68,69 @@ export default defineComponent({
 本地预览
 ```js
 import { v3ImgPreviewFn } from 'v3-img-preview'
-v3ImgPreviewFn(require('./images/1.jpg'))
+const imgUrl1 = require('./images/1.jpg')
+const imgUrl2 = require('./images/2.jpg')
+// 单张图片
+v3ImgPreviewFn(imgUrl1)
+
+// 多张图片
+v3ImgPreviewFn({images : [imgUrl1, imgUrl2]})
+// or
+v3ImgPreviewFn([imgUrl1, imgUrl2])
 ```
 
 
 
+### API
 
+> 以下属性适用于传递对象时使用，若只传递url，您也可以直接调用方法传递 v3ImgPreviewFn("http://www.xxxxxx.png")
+
+| 属性         | 说明                                                     | 类型      | 默认值 |
+| ------------ | -------------------------------------------------------- | --------- | ------ |
+| url          | 图片url                                                  | `string`  | -      |
+| keyboard     | 是否使用键盘快捷键                                       | `boolean` | `true` |
+| images       | 图片数组，用于展示多个图片时，可以使用该属性传递多张图片 | `Array`   | -      |
+| escClose     | 是否支持esc关闭，注意：`keyboard`禁用时此功能也将禁用    | `boolean` | `true` |
+| showCloseBtn | 是否显示关闭按钮                                         | `boolean` | `true` |
+| showToolbar  | 是否显示工具栏                                           | `boolean` | `true` |
+| showArrowBtn | 是否显示左右箭头                                         | `boolean` | `true` |
+
+
+
+### 全局配置方式
+
+我们所有的API都支持全局配置，您可以在注册插件的时候配置全局属性
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import VImagesPreview from 'v3-img-preview'
+const app = createApp(App)
+app.mount('#app')
+// 全局配置属性
+app.use(VImagesPreview, { keyboard: false,escClose: false,showToolbar: false })
+
+```
+
+
+
+配置优先级
+
+> 配置项的优先级为 **组件内传入配置 > 全局配置 > 默认值**
+
+
+
+### 快捷键
+
+
+
+| 快捷键  | 说明      |
+| ------- | --------- |
+| A    ←  | 上一张    |
+| D    →  | 下一长    |
+| S     ↓ | 缩小      |
+| W    ↑  | 放大      |
+| Q       | 左旋转90° |
+| E       | 右旋转90° |
+| Space   | 复位      |
 

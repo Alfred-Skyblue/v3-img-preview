@@ -120,10 +120,10 @@ if (!argv.format || argv.format === 'es') {
             }
           ]
         ]
+      }),
+      terser({
+        compress: { drop_console: true }
       })
-      // terser({
-      //   compress: { drop_console: true }
-      // })
     ]
   }
   buildFormats.push(esConfig)
@@ -137,7 +137,7 @@ if (!argv.format || argv.format === 'cjs') {
       compact: true,
       file: 'dist/v3-img-preview.ssr.js',
       format: 'cjs',
-      name: 'VImagesPreview',
+      name: 'V3ImgPreview',
       exports: 'auto',
       globals
     },
@@ -160,7 +160,7 @@ if (!argv.format || argv.format === 'iife') {
       compact: true,
       file: 'dist/v3-img-preview.min.js',
       format: 'iife',
-      name: 'VImagesPreview',
+      name: 'V3ImgPreview',
       exports: 'auto',
       globals
     },

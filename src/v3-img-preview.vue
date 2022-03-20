@@ -147,10 +147,6 @@ const loadImage = (url: string) => {
 export default defineComponent({
   name: 'V3ImgPreview',
   props: {
-    entryDir: {
-      type: String,
-      default: 'src'
-    },
     showToolbar: {
       type: Boolean,
       default: true
@@ -158,10 +154,6 @@ export default defineComponent({
     showArrowBtn: {
       type: Boolean,
       default: true
-    },
-    visible: {
-      type: Boolean,
-      default: false
     },
     keyboard: {
       type: Boolean,
@@ -213,10 +205,15 @@ export default defineComponent({
     const handleKeyStroke = useDebounceFn((e: KeyboardEvent) => {
       if (!props.keyboard) return false
       e.preventDefault()
-      if (['s', 'S', 'ArrowDown'].includes(e.key)) handleScale(-0.1, false)
-      if (['w', 'W', 'ArrowUp'].includes(e.key)) handleScale(0.1, false)
-      if (e.key === ' ') initImgSize()
-      if (e.key === 'Escape' && props.escClose) handleClose()
+      const { key } = e
+      if (['s', 'S', 'ArrowDown'].includes(key)) return handleScale(-0.1, false)
+      if (['w', 'W', 'ArrowUp'].includes(key)) return handleScale(0.1, false)
+      if (key === ' ') return initImgSize()
+      if (key === 'Escape' && props.escClose) return handleClose()
+      if (['E', 'e'].includes(key)) return handleRotate(false)
+      if (['Q', 'q'].includes(key)) return handleRotate(true)
+      if (['a', 'A', 'ArrowLeft'].includes(key)) return toggleImg(false)
+      if (['d', 'D', 'ArrowRight'].includes(key)) return toggleImg(true)
     }, 200)
     onKeyStroke(keys, handleKeyStroke)
 
@@ -297,8 +294,12 @@ export default defineComponent({
      */
     function init() {
       nextTick(() => {
-        useEventListener(vImagesWrap.value, 'mousewheel', handleScroll)
-        useEventListener(document.body, 'DOMMouseScroll', handleScroll)
+        useEventListener(vImagesWrap.value, 'mousewheel', handleScroll, {
+          passive: true
+        })
+        useEventListener(document.body, 'DOMMouseScroll', handleScroll, {
+          passive: true
+        })
         initImgSize()
         initImg()
       })
@@ -385,7 +386,6 @@ export default defineComponent({
   .img-container {
     z-index: 201;
     position: absolute;
-    overflow: hidden;
     height: 100vh;
     width: 100vw;
     top: 0;
@@ -413,6 +413,7 @@ export default defineComponent({
     font-size: 24px;
     cursor: pointer;
     transition: all 0.2s;
+    z-index: 280;
     background: rgba(0, 0, 0, 0.3);
     &:hover {
       opacity: 0.8;

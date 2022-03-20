@@ -1,7 +1,21 @@
 {
   "name": "v3-img-preview",
-  "version": "1.0.2",
-  "description": "",
+  "version": "1.0.0",
+  "description": "vue3图片预览插件",
+  "private": false,
+  "author": {
+    "name": "ypt",
+    "email": "yangpanteng@gmail.com"
+  },
+  "keywords": [
+    "vue3",
+    "img",
+    "images",
+    "图片",
+    "图片预览"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Alfred-Skyblue/v3-img-preview",
   "main": "dist/v3-img-preview.ssr.js",
   "browser": "dist/v3-img-preview.esm.js",
   "module": "dist/v3-img-preview.esm.js",
@@ -23,6 +37,13 @@
   },
   "dependencies": {
     "@vueuse/core": "^8.1.1"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alfred-Skyblue/v3-img-preview"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",

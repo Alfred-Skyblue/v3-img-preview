@@ -16,15 +16,16 @@ const id = 'v3-img-preview-container-id'
 let v3ImgPreviewApp: App = {} as App
 
 export function v3ImgPreviewFn(options: string): App
+export function v3ImgPreviewFn(options: string[]): App
 export function v3ImgPreviewFn(options: IV3ImgPreviewProps): App
 export function v3ImgPreviewFn(options: any) {
   if (v3ImgPreviewApp._instance) return false
+  // 传递数组时，默认展示多张图片
+  if (Array.isArray(options)) options = { images: options }
   // If options is a string, it's a global option
-  if (typeof options === 'string') {
-    options = {
-      url: options
-    }
-  }
+  // 传递字符串时，默认为单张图片
+  if (typeof options === 'string') options = { url: options }
+  // 合并配置
   options = { ...v3ImgPreviewConfig, ...options }
   let dom = document.getElementById(id)
   if (!dom) {
