@@ -16,7 +16,7 @@
           v-show="imgState === 'success'"
           @dragstart.prevent
           :src="src"
-          :style="`transform: scale(${imgScale}) rotate(${imgRotate}deg);${maxWH}`"
+          :style="`transform: scale(${imgScale}) rotate(${imgRotate}deg);`"
           alt=""
         />
         <!--</editor-fold>-->
@@ -195,8 +195,7 @@ export default defineComponent({
     })
     const style = reactive({
       imgScale: 1,
-      imgRotate: 0,
-      maxWH: 'max-width:100%;max-height:100%;'
+      imgRotate: 0
     })
     /**
      * 键盘事件
@@ -383,6 +382,7 @@ export default defineComponent({
     margin: auto;
     transition: all 0.2s;
   }
+
   .img-container {
     z-index: 201;
     position: absolute;
@@ -391,6 +391,10 @@ export default defineComponent({
     top: 0;
     left: 0;
     text-align: center;
+    .img-content {
+      max-width: 100%;
+      max-height: 100%;
+    }
     .img-error {
       font-size: 300px;
       color: #d8d8d8;
