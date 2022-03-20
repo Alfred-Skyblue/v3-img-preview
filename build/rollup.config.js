@@ -121,9 +121,7 @@ if (!argv.format || argv.format === 'es') {
           ]
         ]
       }),
-      terser({
-        compress: { drop_console: true }
-      })
+      terser()
     ]
   }
   buildFormats.push(esConfig)
@@ -146,7 +144,8 @@ if (!argv.format || argv.format === 'cjs') {
       ...baseConfig.plugins.preVue,
       vue(baseConfig.plugins.vue),
       ...baseConfig.plugins.postVue,
-      babel(baseConfig.plugins.babel)
+      babel(baseConfig.plugins.babel),
+      terser()
     ]
   }
   buildFormats.push(umdConfig)
@@ -171,7 +170,6 @@ if (!argv.format || argv.format === 'iife') {
       ...baseConfig.plugins.postVue,
       babel(baseConfig.plugins.babel),
       terser({
-        compress: { drop_console: true },
         output: {
           ecma: 5
         }

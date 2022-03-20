@@ -97,7 +97,6 @@ import {
   reactive,
   ref,
   toRefs,
-  onUnmounted,
   onMounted,
   nextTick,
   PropType,
@@ -330,10 +329,6 @@ export default defineComponent({
       }
       changeUrl(props.images[state.imgIndex])
     }
-    onUnmounted(() => {
-      console.log('onUnmounted')
-    })
-
     return {
       vImagesWrap,
       imgContainer,
