@@ -1,6 +1,7 @@
 //@ts-nocheck
 export function loadIcon() {
   !(function (t) {
+    t.__V3__IMG__PREVIEW__LOAD__ICON__SVG__ = true
     var e,
       a,
       c,
@@ -66,5 +67,5 @@ export function loadIcon() {
           (o.onreadystatechange = function () {
             'complete' == o.readyState && ((o.onreadystatechange = null), d())
           }))
-  })(window)
+  })(typeof window !== 'undefined' ? window : global)
 }

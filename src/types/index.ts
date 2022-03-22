@@ -15,7 +15,10 @@ export interface IV3ImgPreviewProps {
   showToolbar?: boolean
   // 显示左右箭头
   showArrowBtn?: boolean
+  // 当前显示索引
+  index: number
 }
+
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     $v3ImgPreviewFn: (options: IV3ImgPreviewProps | string | string[]) => App

@@ -1,7 +1,7 @@
 import { App, createApp, Plugin } from 'vue'
-import { loadIcon } from './iconfont/iconfont'
+// import { loadIcon } from './iconfont/iconfont'
 // rollup 打包静态js需要es6模块化
-loadIcon()
+// loadIcon()
 
 import component from '@/v3-img-preview.vue'
 import { IV3ImgPreviewProps } from '@/types'
