@@ -1,0 +1,1 @@
+import{d as a,o,c as i,a as r,w as n,y as m}from"./app.7cb6c2a7.js";var p="/images/img1.jpg";const g=a({setup(c){const t=e=>m(e);return(e,s)=>(o(),i("div",null,[r("img",{src:p,alt:"",onClick:s[0]||(s[0]=n(l=>t("/images/img1.jpg"),["stop"]))})]))}});export{g as default};
