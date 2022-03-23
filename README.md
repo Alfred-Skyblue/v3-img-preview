@@ -6,8 +6,13 @@
 <a target="_blank" href="https://github.com/Alfred-Skyblue/v3-img-preview" style="margin-right: 5px;">![GitHub Repo stars](https://img.shields.io/github/stars/Alfred-Skyblue/v3-img-preview?style=social)
 </a>
 
-> 基于vue3编写的图片预览插件，支持单图和多图预览
+## 简介
+> 基于vue3编写的图片预览插件，支持单图和多图预览，支持图片旋转，缩放，移动等功能
 
++ [github](https://github.com/Alfred-Skyblue/v3-img-preview)
++ [码云](https://gitee.com/yuan_fangY/v3-img-preview)
++ [Document](https://alfred-skyblue.github.io/v3-img-preview/)
++ [国内文档地址](https://yuan_fangy.gitee.io/v3-img-preview/)
 
 
 ## 安装
@@ -72,7 +77,9 @@ export default defineComponent({
 本地预览
 ```js
 import { v3ImgPreviewFn } from 'v3-img-preview'
-const imgUrl1 = require('./images/1.jpg')
+const imgU
+
+rl1 = require('./images/1.jpg')
 const imgUrl2 = require('./images/2.jpg')
 // 单张图片
 v3ImgPreviewFn(imgUrl1)
