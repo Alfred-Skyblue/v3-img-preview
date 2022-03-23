@@ -1,5 +1,5 @@
 <template>
-  <img :src="url" alt="" @click="handlePreview" />
+  <img :src="url" alt="" @click.stop="handlePreview" />
 </template>
 
 <script lang="ts" setup>
