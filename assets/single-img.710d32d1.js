@@ -1,0 +1,1 @@
+import{d as s,o as t,c as a,a as r,w as c,y as i}from"./app.d515fec7.js";var n="/v3-img-preview/images/img1.jpg";const l=["onClick"],d=s({setup(p){const o=e=>{console.log("-> e",e),i(e.target.src)};return(e,m)=>(t(),a("div",null,[r("img",{src:n,alt:"",onClick:c(o,["stop"])},null,8,l)]))}});export{d as default};
