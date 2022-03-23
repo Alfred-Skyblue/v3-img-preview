@@ -1,6 +1,10 @@
 # v3-img-preview
 
-
+<a target="_blank" href="https://github.com/Alfred-Skyblue" style="margin-right: 5px;">![github](https://img.shields.io/badge/Author-Alfred_Skyblue-blue.svg)</a>
+<a target="_blank" href="https://github.com/Alfred-Skyblue/v3-img-preview/blob/master/LICENSE" style="margin-right: 5px;">![MIT](https://img.shields.io/badge/License-MIT-green.svg)</a>
+<a style="margin-right: 5px;">![vue2.x](https://img.shields.io/badge/VUE-3.0-green.svg)</a>
+<a target="_blank" href="https://github.com/Alfred-Skyblue/v3-img-preview" style="margin-right: 5px;">![GitHub Repo stars](https://img.shields.io/github/stars/Alfred-Skyblue/v3-img-preview?style=social)
+</a>
 
 > 基于vue3编写的图片预览插件，支持单图和多图预览
 
