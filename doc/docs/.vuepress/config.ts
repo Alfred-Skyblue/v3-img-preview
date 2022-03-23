@@ -2,9 +2,9 @@ import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import { resolve } from 'path'
 
-// @ts-ignore
 export default defineUserConfig<DefaultThemeOptions>({
   // 站点配置
+  base: '/v3-img-preview/',
   lang: 'zh-CN',
   title: 'v3-img-preview',
   description: '基于vue3的图片预览插件',

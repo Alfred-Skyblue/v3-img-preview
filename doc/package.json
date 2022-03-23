@@ -12,6 +12,6 @@
     "vuepress-plugin-demo-block-vue3": "^1.0.3"
   },
   "dependencies": {
-    "v3-img-preview": "file:.yalc/v3-img-preview"
+    "v3-img-preview": "^1.1.13"
   }
 }
