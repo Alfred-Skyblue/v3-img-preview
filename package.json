@@ -15,7 +15,7 @@
     "图片预览"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/Alfred-Skyblue/v3-img-preview",
+  "homepage": "https://alfred-skyblue.github.io/v3-img-preview/",
   "main": "dist/v3-img-preview.ssr.js",
   "browser": "dist/v3-img-preview.esm.js",
   "module": "dist/v3-img-preview.esm.js",
