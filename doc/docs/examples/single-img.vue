@@ -6,8 +6,8 @@
 
 <script lang="ts" setup>
 import { v3ImgPreviewFn } from 'v3-img-preview'
+
 const handlePreview = (e: MouseEvent) => {
-  console.log('-> e', e)
   v3ImgPreviewFn((e.target as HTMLImageElement).src)
 }
 </script>
