@@ -1,0 +1,1 @@
+import{d as t,o,c as a,a as r,w as i,y as c}from"./app.e08a547a.js";var n="/v3-img-preview/images/img1.jpg";const l=["onClick"],d=t({setup(p){const s=e=>{c(e.target.src)};return(e,m)=>(o(),a("div",null,[r("img",{src:n,alt:"",onClick:i(s,["stop"])},null,8,l)]))}});export{d as default};
