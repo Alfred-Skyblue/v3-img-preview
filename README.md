@@ -17,8 +17,6 @@
 
 ## 安装
 
-
-
 ```shell
 npm install v3-img-preview --save
 # or
