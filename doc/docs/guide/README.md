@@ -2,7 +2,7 @@
 sidebarDepth: 4
 ---
 
-## 快速上手
+### 介绍
 
 <a target="_blank" href="https://github.com/Alfred-Skyblue" style="margin-right: 5px;">![github](https://img.shields.io/badge/Author-Alfred_Skyblue-blue.svg)</a>
 <a target="_blank" href="https://github.com/Alfred-Skyblue/v3-img-preview/blob/master/LICENSE" style="margin-right: 5px;">![MIT](https://img.shields.io/badge/License-MIT-green.svg)</a>
