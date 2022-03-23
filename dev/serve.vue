@@ -1,9 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { v3ImgPreviewFn } from '@/entry.esm'
-console.log('-> v3ImgPreview', v3ImgPreviewFn)
 
-const images = [...'12345'].map(i => require(`./images/img${i}.jpg`))
+const images = [...'1'].map(i => require(`./images/img${i}.jpg`))
 export default defineComponent({
   name: 'ServeDev',
   components: {},

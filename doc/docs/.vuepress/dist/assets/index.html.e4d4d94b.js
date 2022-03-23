@@ -1,1 +1,0 @@
-const e={key:"v-5c19916c",path:"/options/",title:"",lang:"zh-CN",frontmatter:{sidebarDepth:5},excerpt:"",headers:[{level:2,title:"\u4F7F\u7528\u8BF4\u660E",slug:"\u4F7F\u7528\u8BF4\u660E",children:[{level:3,title:"API",slug:"api",children:[]}]}],git:{updatedTime:null,contributors:[]},filePathRelative:"options/README.md"};export{e as data};

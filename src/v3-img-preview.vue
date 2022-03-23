@@ -201,6 +201,7 @@ export default defineComponent({
       imgScale: 1,
       imgRotate: 0
     })
+    const isMultiple = computed(() => props.images?.length > 1)
     /**
      * 键盘事件
      * @type {(e: KeyboardEvent) => void}
@@ -213,8 +214,8 @@ export default defineComponent({
       if (['w', 'W', 'ArrowUp'].includes(key)) return handleScale(0.1, false)
       if (key === ' ') return initImgSize()
       if (key === 'Escape' && props.escClose) return handleClose()
-      if (['E', 'e'].includes(key)) return handleRotate(false)
-      if (['Q', 'q'].includes(key)) return handleRotate(true)
+      if (['E', 'e'].includes(key)) return handleRotate(true)
+      if (['Q', 'q'].includes(key)) return handleRotate(false)
       if (['a', 'A', 'ArrowLeft'].includes(key)) return toggleImg(false)
       if (['d', 'D', 'ArrowRight'].includes(key)) return toggleImg(true)
     }, 200)
@@ -323,6 +324,7 @@ export default defineComponent({
      * @param {boolean} flag 为true时，切换到下一张，为false时，切换到上一张
      */
     function toggleImg(flag: boolean) {
+      if (!isMultiple.value) return
       if (flag) {
         state.imgIndex++
         if (state.imgIndex > props.images.length - 1) state.imgIndex = 0
@@ -343,7 +345,8 @@ export default defineComponent({
       dragStyle,
       handleScale,
       handleRotate,
-      visibleArrowBtn
+      visibleArrowBtn,
+      isMultiple
     }
   }
 })

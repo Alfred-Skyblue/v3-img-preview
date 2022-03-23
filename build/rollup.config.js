@@ -52,7 +52,6 @@ const baseConfig = {
       resolve({
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
       }),
-      // Process only `<style module>` blocks.
       PostCSS({
         plugins: [postcssImport()],
         modules: {
