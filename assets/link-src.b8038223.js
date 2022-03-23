@@ -1,0 +1,1 @@
+import{d as e,o as s,c,w as n,y as a}from"./app.ef0c4b88.js";const i=["onClick"],u=e({setup(r){const t="https://img0.baidu.com/it/u=3155150237,2943070590&fm=253&fmt=auto&app=138&f=JPEG?w=667&h=500",o=()=>{a(t)};return(l,p)=>(s(),c("img",{src:t,alt:"",onClick:n(o,["stop"])},null,8,i))}});export{u as default};
