@@ -304,9 +304,7 @@ export default defineComponent({
       })
     }
     onMounted(() => {
-      // @ts-ignore
       if (!window.__V3__IMG__PREVIEW__LOAD__ICON__SVG__) loadIcon()
-
       init()
     })
 
