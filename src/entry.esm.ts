@@ -6,7 +6,6 @@ import { App, createApp, Plugin } from 'vue'
 import component from '@/v3-img-preview.vue'
 import { IV3ImgPreviewProps } from '@/types'
 
-// Define typescript interfaces for installable component
 type InstallableComponent = typeof component & {
   install: Exclude<Plugin['install'], undefined>
 }
