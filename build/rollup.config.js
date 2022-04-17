@@ -53,6 +53,7 @@ const baseConfig = {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.vue']
       }),
       PostCSS({
+        // extract: 'index.css',
         plugins: [postcssImport()],
         modules: {
           generateScopedName: '[local]___[hash:base64:5]'
