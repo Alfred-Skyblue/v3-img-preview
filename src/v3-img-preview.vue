@@ -468,6 +468,7 @@ export default defineComponent({
       background: rgba(0, 0, 0, 0.3);
       color: #c3c3c3;
       svg {
+        box-sizing: content-box;
         padding: 0 10px;
         transition: all 0.2s;
         &:hover {
