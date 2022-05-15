@@ -380,6 +380,7 @@ export default defineComponent({
     bottom: 0;
     margin: auto;
     transition: all 0.2s;
+    cursor: move;
   }
 
   .img-container {
