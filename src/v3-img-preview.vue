@@ -1,7 +1,7 @@
 <template>
   <transition name="fade">
     <div class="v-images-wrap" ref="vImagesWrap" v-if="visible">
-      <!--   loading     -->
+      <!--   载入loading     -->
       <svg
         class="icon img-loading rotate-animation"
         v-show="imgState === 'loading'"
